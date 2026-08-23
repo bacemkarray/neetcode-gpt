@@ -20,7 +20,7 @@ class Solution:
         # Hint: add a small epsilon (1e-7) to y_pred to avoid log(0)
         # return round(your_answer, 4)
         y_pred += 1e-7
-        loss = -(1/y_true.shape[0])*np.sum(np.sum(y_true*np.log(y_pred), axis=1))
+        loss = -(1/y_true.shape[0])*np.sum(np.sum(y_true*np.log(y_pred)))
 
 
         return np.round(loss,4)
