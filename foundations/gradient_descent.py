@@ -6,6 +6,7 @@ class Solution:
         # Round final answer to 5 decimal places
         x = init
         for i in range(iterations):
-            x = x - learning_rate*2*x
+            derivative = 2*x
+            x = x - learning_rate*derivative
         return round(x,5)
 
